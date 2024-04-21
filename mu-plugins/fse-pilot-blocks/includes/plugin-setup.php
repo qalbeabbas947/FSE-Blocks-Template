@@ -21,7 +21,7 @@ function fse_pilot_blocks_init(): void {
 	$args['attributes'] = array(
 						"category" => array(
 							"type" => "string",
-							"default" => "custom"
+							"default" => ""
 						),
 						"post_type"  => array(
 							"type" => "string",
