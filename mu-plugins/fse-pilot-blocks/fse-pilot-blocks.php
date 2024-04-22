@@ -42,3 +42,12 @@ if ( is_php_version_compatible( FSE_PILOT_BLOCKS_METADATA['RequiresPHP'] ) && is
 		include $fse_pilot_blocks_filename;
 	}
 }
+/**
+ *  Enqueue Fontaweosome Icons
+ */
+add_action( 'wp_enqueue_scripts', 'enqueue_font_aweosome_icons');
+
+function enqueue_font_aweosome_icons() {
+
+    wp_enqueue_script( 'load-fa', 'https://kit.fontawesome.com/7f146f54bf.js' );
+}

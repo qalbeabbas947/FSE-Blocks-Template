@@ -20,7 +20,11 @@ import { useBlockProps } from '@wordpress/block-editor';
  * @see https://www.npmjs.com/package/@wordpress/scripts#using-css
  */
 import './editor.scss';
-
+import metadata from './block.json';
+import ServerSideRender from '@wordpress/server-side-render';
+import {
+	Disabled
+} from '@wordpress/components';
 /**
  * The edit function describes the structure of your block in the context of the
  * editor. This represents what the editor will render when the block is used.
@@ -29,13 +33,21 @@ import './editor.scss';
  *
  * @return {WPElement} Element to render.
  */
-export default function Edit() {
+export default function Edit({ attributes , setAttributes }) {
+
+	const blockProps = useBlockProps( {
+		className: 'wz-fse-gutenberg',
+	} );
+	
 	return (
-		<p { ...useBlockProps() }>
-			{ __(
-				'Todo List – hello from the editor!',
-				'fse-pilot-blocks'
-			) }
-		</p>
+		<div { ...blockProps }>
+			<Disabled>
+				<ServerSideRender
+					block={ metadata.name }
+					skipBlockSupportAttributes
+					attributes={ attributes }
+				/>
+			</Disabled>
+		</div>
 	);
 }

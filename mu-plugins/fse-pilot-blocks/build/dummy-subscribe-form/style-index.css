@@ -7,5 +7,54 @@
  *
  * Replace them with your own styles or remove the file completely.
  */
+.fse-subscribe-form-wrapper {
+  text-align: center;
+}
+
+.fse-subscribe-form-wrapper input {
+  margin-right: 15px;
+  padding: 15px;
+  border-radius: 4px;
+  border: unset;
+}
+
+.fse-subscribe-form-wrapper input:focus-visible {
+  outline-color: #1F1F1F;
+}
+
+.fse-subscribe-form-wrapper button {
+  padding: 15px;
+  padding-right: 25px;
+  padding-left: 25px;
+  border-radius: 999px;
+  background-color: #FFCF00;
+  font-size: 16px;
+  font-weight: 700;
+  border: unset;
+}
+
+@media only screen and (max-width: 781px) {
+  .fse-news-letter-form-width p {
+    max-width: 95% !important;
+  }
+  .fse-subscribe-form-wrapper input {
+    padding: unset;
+    width: 97%;
+    margin-bottom: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 3%;
+  }
+  .fse-subscribe-form-wrapper button {
+    width: 100%;
+  }
+  .fse-footer-section-form-wrapper {
+    padding-right: 20px !important;
+    padding-left: 20px !important;
+  }
+  .fse-footer-newsletter-text {
+    width: 60%;
+  }
+}
 
 /*# sourceMappingURL=style-index.css.map*/
