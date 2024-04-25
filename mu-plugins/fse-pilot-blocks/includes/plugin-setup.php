@@ -15,7 +15,7 @@ defined( 'ABSPATH' ) || exit;
 function fse_pilot_blocks_init(): void {
 	register_block_type( FSE_PILOT_BLOCKS_DIR . 'build/dummy-subscribe-form' );
 	register_block_type( FSE_PILOT_BLOCKS_DIR . 'build/table-of-contents' );
-	
+	register_block_type( FSE_PILOT_BLOCKS_DIR . 'build/custom-post-count' );
 	$args = array();
 	$args['category'] = 'widgets';
 	$args['attributes'] = array(

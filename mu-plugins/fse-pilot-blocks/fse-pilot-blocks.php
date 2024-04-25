@@ -31,7 +31,7 @@ define( 'FSE_PILOT_BLOCKS_METADATA', get_plugin_data( __FILE__, false, false ) )
 
 define( 'FSE_PILOT_BLOCKS_DIR', plugin_dir_path( __FILE__ ) );
 define( 'FSE_PILOT_BLOCKS_URL', plugin_dir_url( __FILE__ ) );
-
+define( 'FSE_ASSET_URL', plugin_dir_url( __FILE__ ) . 'assets/' );
 // Include the rest of the blocks plugin's files if system requirements check out.
 if ( is_php_version_compatible( FSE_PILOT_BLOCKS_METADATA['RequiresPHP'] ) && is_wp_version_compatible( FSE_PILOT_BLOCKS_METADATA['RequiresWP'] ) ) {
 	foreach ( glob( __DIR__ . '/includes/*.php' ) as $fse_pilot_blocks_filename ) {
@@ -42,6 +42,7 @@ if ( is_php_version_compatible( FSE_PILOT_BLOCKS_METADATA['RequiresPHP'] ) && is
 		include $fse_pilot_blocks_filename;
 	}
 }
+
 /**
  *  Enqueue Fontaweosome Icons
  */

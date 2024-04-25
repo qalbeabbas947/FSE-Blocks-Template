@@ -102,3 +102,41 @@ function fse_pilot_enqueue_custom_block_styles() {
 	}
 }
 add_action( 'init', 'fse_pilot_enqueue_custom_block_styles' );
+
+
+add_action( 'uagb_single_post_before_title_grid', 'add_taxonomy_before_title', 10, 2 );
+
+/**
+ *  Add taxnomy befor title
+ * 
+ *  @param $post_id, $attributes
+ */
+function add_taxonomy_before_title( $post_id, $attributes ) {
+
+    $post_category = get_the_category( $post_id )
+    ?>
+    <span class="fse-post-grid-category-pd"><?php the_category(); ?></span>
+    <?php
+}
+
+add_action( 'uagb_single_post_after_excerpt_grid', 'add_date_and_comment_count_after_excerpt', 10, 2 );
+
+/**
+ *  add date and comment count after post excerpt
+ * 
+ *  @param $post_id, $attributes
+ */
+function add_date_and_comment_count_after_excerpt( $post_id, $attributes ) {
+
+    $post_date = get_post_time( 'F j, Y', false, $post_id );
+    $post_comment_count = get_comments_number( $post_id );
+    ?>
+    <div class="date-post-grid-and-comment-wrapper">
+        <span class="fse-post-grid-date"><?php echo $post_date ;?></span>
+        <span class="fse-post-grid-comments">
+            <i class="fa-regular fa-comment"></i>
+            <p class="fse-post-grid-side-comment-count"><?php echo $post_comment_count;?></p>
+        </span>
+    </div>
+    <?php
+}

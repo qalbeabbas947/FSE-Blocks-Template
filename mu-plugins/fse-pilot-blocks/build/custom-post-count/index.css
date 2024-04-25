@@ -1,6 +1,6 @@
-/*!***************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./mu-plugins/fse-pilot-blocks/src/custom-post-display/style.scss ***!
-  \***************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./mu-plugins/fse-pilot-blocks/src/custom-post-count/editor.scss ***!
+  \**************************************************************************************************************************************************************************************************************************************************************************************/
 .fse-pd-post-list-wrapper {
   width: 100%;
   display: flex;
@@ -8,7 +8,7 @@
 }
 
 .feature-pd-post-wrapper {
-  width: 50%;
+  width: 60%;
 }
 
 .fse-pd-right-side-post-list {
@@ -23,64 +23,42 @@
 }
 
 .fse-pd-feature-title {
-  margin: 0;
-}
-
-.fse-pd-feature-title a {
   font-family: "Barlow Condensed", sans-serif;
   font-weight: 700;
   font-size: 48px;
   text-transform: uppercase;
   margin: 0px;
-  text-decoration: none;
 }
 
-.fse-pd-side-grid-title a {
+.fse-pd-side-grid-title {
   font-family: "Plus Jakarta Sans", sans-serif;
   font-weight: 800;
   font-size: 24px;
   margin-top: 10px;
   margin-bottom: 10px;
-  text-decoration: none;
-  display: block;
 }
 
 .fse-pd-feature-description {
   font-weight: 400;
   font-size: 18px;
   font-family: "Plus Jakarta Sans", sans-serif;
+  padding: 20px 0px;
   margin: 0;
-}
-
-.fse-pd-feature-category .post-categories,
-.category-pd .post-categories {
-  padding: unset;
-  margin: unset;
 }
 
 .fse-pd-feature-category {
+  padding-top: 20px;
+  padding-bottom: 10px;
   display: block;
-  margin-top: 10px;
-  margin-bottom: 10px;
 }
 
-.fse-pd-side-grid-title {
-  margin: 0;
-}
-
-.category-pd a,
-.fse-pd-feature-category a {
+.category-pd,
+.fse-pd-feature-category {
   color: #006DB7;
   font-family: "Plus Jakarta Sans", sans-serif;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: 700;
-  text-decoration: none;
-}
-
-.fse-pd-feature-category li,
-.category-pd li {
-  list-style: none;
 }
 
 .date-pd-and-comment-wrapper {
@@ -113,13 +91,8 @@
   align-items: center;
 }
 
-.feature-pd-image,
-.fse-pd-side-feature-image {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
-  border-radius: 8px;
+.feature-pd-image {
+  width: 100%;
 }
 
 .side-pd-grid-feature-image {
@@ -143,7 +116,7 @@
   .fse-pd-feature-title {
     font-size: 42px;
   }
-  .fse-pd-side-grid-title a {
+  .fse-pd-side-grid-title {
     font-size: 20px;
   }
 }
@@ -151,7 +124,7 @@
   .fse-pd-feature-title {
     font-size: 40px;
   }
-  .fse-pd-side-grid-title a {
+  .fse-pd-side-grid-title {
     font-size: 20px;
   }
 }
@@ -159,7 +132,7 @@
   .fse-pd-feature-title {
     font-size: 35px;
   }
-  .fse-pd-side-grid-title a {
+  .fse-pd-side-grid-title {
     font-size: 16px;
   }
 }
@@ -188,10 +161,10 @@
   }
 }
 @media only screen and (max-width: 870px) {
-  .fse-pd-feature-title a {
-    font-size: 40px;
+  .fse-pd-feature-title {
+    font-size: 27px;
   }
-  .fse-pd-side-grid-title a {
+  .fse-pd-side-grid-title {
     font-size: 12px;
   }
   .fse-pd-feature-description {
@@ -214,7 +187,7 @@
   .side-grid-feature-image {
     width: 20%;
   }
-  .fse-pd-side-grid-title a {
+  .fse-pd-side-grid-title {
     font-size: 21px;
   }
   .fse-pd-feature-title {
@@ -241,4 +214,4 @@
   }
 }
 
-/*# sourceMappingURL=style-index.css.map*/
+/*# sourceMappingURL=index.css.map*/
